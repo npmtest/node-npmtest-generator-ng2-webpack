@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-generator-ng2-webpack/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-generator-ng2-webpack/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-generator-ng2-webpack/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-generator-ng2-webpack/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-generator-ng2-webpack/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-generator-ng2-webpack/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-generator-ng2-webpack/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-generator-ng2-webpack/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-generator-ng2-webpack/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-generator-ng2-webpack/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-generator-ng2-webpack/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-generator-ng2-webpack/build/coverage.html/index.html)
 
@@ -35,61 +35,18 @@
 ```json
 
 {
-    "name": "generator-ng2-webpack",
-    "version": "0.6.7",
-    "description": "An opinionated tool for scaffolding an app using angular2 and webpack",
-    "homepage": "https://github.com/cmelion/generator-ng2-webpack",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/cmelion/generator-ng2-webpack"
-    },
-    "engines": {
-        "node": ">= 4.2.1 <= 5.6.0"
-    },
-    "scripts": {
-        "eslint": "eslint .",
-        "lint": "npm run eslint",
-        "mocha": "istanbul cover --root ./generators  --include-all-sources -x **/templates/** --dir ./coverage/mocha --report text --report text-summary --report lcov --print none  _mocha -- test/mocha/**/*.spec.js --reporter spec --timeout 10000",
-        "mocha:watch": "mocha test/mocha/**/*.spec.js -R nyan -w --timeout 10000",
-        "pretest": "npm run eslint",
-        "test": "npm run mocha",
-        "release:full": "gulp release:full"
-    },
     "author": {
         "name": "Charles Fulnecky",
         "url": "https://github.com/cmelion"
     },
-    "files": [
-        "generators",
-        "libs",
-        ".jsbeautifyrc"
-    ],
-    "main": "generators/app/index.js",
-    "preferGlobal": true,
-    "keywords": [
-        "angular 2",
-        "angular",
-        "angular2",
-        "asyncroute",
-        "boilerplate",
-        "generator",
-        "hot-loading",
-        "hot-loader",
-        "ng2",
-        "react",
-        "scaffold",
-        "starter",
-        "typescript",
-        "webpack",
-        "yeoman",
-        "yeoman-generator"
-    ],
-    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/cmelion/generator-ng2-webpack/issues"
+    },
     "dependencies": {
         "chalk": "^1.1.1",
         "gulp-filter": "^3.0.1",
         "gulp-tap": "0.1.3",
-        "js-beautify": "beautify-web/js-beautify",
+        "js-beautify": "github:beautify-web/js-beautify",
         "lodash": "3.10.1",
         "mkdirp": "^0.5.1",
         "repeating": "^2.0.0",
@@ -101,6 +58,7 @@
         "yeoman-option-or-prompt": "^1.0.2",
         "yosay": "^1.1.0"
     },
+    "description": "An opinionated tool for scaffolding an app using angular2 and webpack",
     "devDependencies": {
         "bluebird": "^3.3.1",
         "chai": "^3.5.0",
@@ -130,7 +88,81 @@
         "yargs": "^4.1.0",
         "yeoman-assert": "^2.1.1",
         "yeoman-test": "^1.1.0"
-    }
+    },
+    "directories": {},
+    "dist": {
+        "shasum": "fa017d22e0f0f30d0f86f2c6178ca7281f71abac",
+        "tarball": "https://registry.npmjs.org/generator-ng2-webpack/-/generator-ng2-webpack-0.6.7.tgz"
+    },
+    "engines": {
+        "node": ">= 4.2.1 <= 5.6.0"
+    },
+    "files": [
+        "generators",
+        "libs",
+        ".jsbeautifyrc"
+    ],
+    "gitHead": "041a812d7a1291195291d9d53f769268dbbb9105",
+    "homepage": "https://github.com/cmelion/generator-ng2-webpack",
+    "keywords": [
+        "angular 2",
+        "angular",
+        "angular2",
+        "asyncroute",
+        "boilerplate",
+        "generator",
+        "hot-loading",
+        "hot-loader",
+        "ng2",
+        "react",
+        "scaffold",
+        "starter",
+        "typescript",
+        "webpack",
+        "yeoman",
+        "yeoman-generator"
+    ],
+    "license": "MIT",
+    "main": "generators/app/index.js",
+    "maintainers": [
+        {
+            "name": "cmelion"
+        }
+    ],
+    "name": "generator-ng2-webpack",
+    "optionalDependencies": {},
+    "preferGlobal": true,
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/cmelion/generator-ng2-webpack.git"
+    },
+    "scripts": {
+        "eslint": "eslint .",
+        "lint": "npm run eslint",
+        "mocha": "istanbul cover --root ./generators  --include-all-sources -x **/templates/** --dir ./coverage/mocha --report text --report text-summary --report lcov --print none  _mocha -- test/mocha/**/*.spec.js --reporter spec --timeout 10000",
+        "mocha:watch": "mocha test/mocha/**/*.spec.js -R nyan -w --timeout 10000",
+        "pretest": "npm run eslint",
+        "release:full": "gulp release:full",
+        "test": "npm run mocha"
+    },
+    "version": "0.6.7",
+    "warnings": [
+        {
+            "code": "ENOTSUP",
+            "required": {
+                "node": ">= 4.2.1 <= 5.6.0"
+            },
+            "pkgid": "generator-ng2-webpack@0.6.7"
+        },
+        {
+            "code": "ENOTSUP",
+            "required": {
+                "node": ">= 4.2.1 <= 5.6.0"
+            },
+            "pkgid": "generator-ng2-webpack@0.6.7"
+        }
+    ],
+    "bin": {}
 }
 ```
 
